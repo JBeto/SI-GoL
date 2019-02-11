@@ -29,8 +29,12 @@ int main(int argc, char* argv[])
         if (result.count("fps"))
         {
             size_t fps = result["fps"].as<size_t>();
-            // Put in code to play the game fps here
-            std::cout << fps << std::endl;
+            GameOfLife game(20, 20);
+            game.play(fps);
+        }
+        else {
+            GameOfLife game(20, 20);
+            game.play(4);
         }
     } 
     catch (const cxxopts::OptionException& e) {
