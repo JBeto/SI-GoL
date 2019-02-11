@@ -23,12 +23,15 @@ void GameOfLife::clearScreen() {
 bool GameOfLife::isAlive(size_t row, size_t column) //size_t is the longest unsigned
 {
     bool isAlive = false;
+    int numOfNeighborsAlive = 0;
     
     for(unsigned int i = 0; i < row; ++i)
     {
         for(unsigned int j = 0; j < column; ++j)
         {
-            
+            if(grid[i][j+1]) {
+                ++numOfNeighborsAlive;
+            }
         }
     }
     
