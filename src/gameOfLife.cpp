@@ -20,8 +20,19 @@ void GameOfLife::clearScreen() {
 }
 
 // Determines if a cell is alive or dead based off game of life rules
-bool GameOfLife::isAlive(size_t row, size_t column) {
-    return true;
+bool GameOfLife::isAlive(size_t row, size_t column) //size_t is the longest unsigned
+{
+    bool isAlive = false;
+    
+    for(unsigned int i = 0; i < row; ++i)
+    {
+        for(unsigned int j = 0; j < column; ++j)
+        {
+            
+        }
+    }
+    
+    return isAlive;
 }
 
 // Updates the grid of cells to the next generation based off the game of life rules
