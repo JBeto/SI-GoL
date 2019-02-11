@@ -26,5 +26,22 @@ bool GameOfLife::isAlive(size_t row, size_t column) {
 
 // Updates the grid of cells to the next generation based off the game of life rules
 void GameOfLife::update() {
-
+    bool newGrid[rows][columns];
+    for(unsigned i = 0; i < rows; ++i) {
+        for (unsigned j = 0; j < columns; ++j) {
+            if(isAlive(i, j)) {
+                newGrid[i][j] = true;
+            }
+            else {
+                newGrid[i][j] = false;
+            }
+        }
+    }
+    
+    for(unsigned i = 0; i < rows; ++i) {
+        for (unsigned j = 0; j < columns; ++j) {
+            grid[i][j] = newGrid[i][j];
+        }
+    }
+    
 }
