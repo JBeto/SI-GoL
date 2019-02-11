@@ -32,6 +32,12 @@ bool GameOfLife::isAlive(size_t row, size_t column) //size_t is the longest unsi
             if(grid[i][j+1]) {
                 ++numOfNeighborsAlive;
             }
+            if(grid[i+1][j]) {
+                ++numOfNeighborsAlive;
+            }
+            if(grid[i+1][j+1]) {
+                ++numOfNeighborsAlive;
+            }
         }
     }
     
